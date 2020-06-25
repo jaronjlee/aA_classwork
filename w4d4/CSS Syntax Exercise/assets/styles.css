@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkgrey;
+}
+
+h1 {
+    font-size: 38;
+}
+
+h2 {
+    font-size: 32;
+}
+
+.ingredients-list {
+    list-style: square inside;
+    list-style: georgian inside;
+}
+
+header img {
+    width: 100px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.user_review h4 {
+    font-size: 18px;
+    font-weight: bold;
+}

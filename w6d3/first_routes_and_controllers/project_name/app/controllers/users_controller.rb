@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.new(params.require(:user).permit(:name, :email))
+        user = User.new(user_params)
         if user.save #runs model level violation, should return false
             render json: user
         else
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     def update
         user = User.find(params[:id])
 
-        if user.update(params.require(:user).permit(:name, :email))
+        if user.update(user_params)
             redirect_to "/users/#{user.id}"
         else
             render json: user.errors.full_messages, status: 422
@@ -37,9 +37,11 @@ class UsersController < ApplicationController
             render json: user.errors.full_messages, status: :unprocessable_entity
         end
     end
+
+    private
+    def user_params
+        params.require(:user).permit(:username)
+    end
     
 end
-
-# http://localhost:3000/users?users[name]='Mary'&users[email]='mary@gmail.com'
-# http://localhost:3000/users?name=daniel&email=daniel@gmail.com
 

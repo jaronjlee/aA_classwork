@@ -1,0 +1,25 @@
+<h1>NEW CAT FORM VIEW</h1>
+
+<%# <%= render 'form', cat: @cat, type: :new %> 
+
+<form action="">
+    <label>Name:
+        <input type="text" name="cat[name]">
+    </label>
+    <label>Sex:
+        <input type="radio" id="M" name="gender" value="M">
+        <label for="M">M</label>
+        <input type="radio" id="F" name="gender" value="F">
+        <label for="F">F</label>
+    </label>
+    <select name="colors" id="">
+        <option value="hidden">select a color</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+    </select>
+    <input type="date" value="2020-07-22" name="birth_date"
+    min="2020-01-01" max="2020-12-31">
+    <input type="textarea" name="description">
+    <input type="submit" value="Submit">
+</form>

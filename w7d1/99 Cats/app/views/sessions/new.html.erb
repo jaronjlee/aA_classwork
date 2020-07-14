@@ -1,0 +1,23 @@
+<h1>LOG IN PAGE</h1>
+<br>
+
+
+<form action="<%= session_url %>" method="POST">
+
+    <label>Username:
+        <input type="text" name="user[username]" value = "">
+    </label>
+    <br>
+    <label>Password:
+        <input type="password" name="user[password]" value = "">
+    </label>
+
+    <input type="submit" value="login">
+
+
+
+</form>
+
+<br>
+
+<a href="<%= cats_url %>">Back to Cats</a>

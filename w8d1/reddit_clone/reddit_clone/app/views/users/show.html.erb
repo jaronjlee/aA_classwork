@@ -1,0 +1,14 @@
+<h1>Welcome <%= @user.username %></h1>
+
+
+
+<button><a href="<%=edit_user_url(@user)%>">Edit Account</a></button>
+
+<div>
+<form action="<%=user_url%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete Account</button>
+</form>
+</div>
+

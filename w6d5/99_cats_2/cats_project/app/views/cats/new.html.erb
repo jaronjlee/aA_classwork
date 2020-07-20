@@ -1,0 +1,17 @@
+<h1>CATS CREATION PAGE</h1>
+
+
+
+<form action="<%= cats_url %>" method="POST">
+
+    <label for="cat_name">Name</label>
+    <input type="text" name="cat[name]" id="cat_name" value="">
+
+    <label for="cat_age">Age</label>
+    <input type="integer" name="cat[age]" id="cat_age" value="">
+
+    <label for="cat_color">Color</label>
+    <input type="string" name="cat[color]" id="cat_color" value="">
+
+    <input type="submit" value="create cat">
+</form>

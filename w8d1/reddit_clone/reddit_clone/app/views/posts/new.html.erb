@@ -1,0 +1,17 @@
+<h1>Make a New Post</h1> 
+
+<form action="<%=posts_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label>Title
+        <input type="text" name="post[title]">
+    </label>
+
+    <label>Content
+        <input type="text" name="post[content]">
+    </label>
+
+    <button>Create Post</button>
+</form>
+
+

@@ -1,0 +1,21 @@
+<!-- 
+<h1>CATS INDEX</h1>
+
+<ul>
+    <% @cats.each do |cat| %>
+        <li> <%= cat.name %> </li>
+        <li> <%= cat.color %> </li>
+        <li> <%= cat.age %> </li>
+    <% end %>
+</ul>
+
+-->
+
+<h1>Cats upon cats!</h1>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li><a href="<%= cat_url(cat.id) %>"><%= cat.name %></a></li>
+  <% end %>
+</ul>
+

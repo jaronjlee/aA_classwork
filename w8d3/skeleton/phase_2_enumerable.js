@@ -1,5 +1,5 @@
 Array.prototype.myEach = function(myFunction) {
-    for(i = 0; i < this.length; i++) {
+    for(let i = 0; i < this.length; i++) {
         myFunction(this[i])
     };
 };
@@ -13,14 +13,15 @@ Array.prototype.myEach = function(myFunction) {
 
 
 
-Array.prototype.myMap = function(myFunction(el)) {
+
+Array.prototype.myMap = function(cb) {
     let result = [];
 
-    this.my_each(function(el) {
-        result.push(myFunction(el))
-
-    return result;
-});
+    this.myEach(function(el) {
+        result.push(cb(el));
+    });
+    return console.log(result);
+};
 
 //TEST
 
